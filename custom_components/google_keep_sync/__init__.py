@@ -21,7 +21,7 @@ _LOGGER = logging.getLogger(__name__)
 
 async def async_service_request_sync(coordinator: GoogleKeepSyncCoordinator, call):
     """Handle the request_sync call."""
-    sync_threshold = 55
+    sync_threshold = 12
     last_update_timestamp = as_timestamp(coordinator.last_update_success_time)
     seconds_since_update = as_timestamp(utcnow()) - last_update_timestamp
 
